@@ -6,7 +6,7 @@ const Product = ({ product }) => {
     return (
         <div className="flex flex-col justify-evenly bg-slate-50 hover:shadow-[0_0px_35px_-15px_rgba(50,130,173,0.8)] rounded w-full hover:bg-slate-100 text-[#183661] transition-all duration-200">
             <div className='flex justify-center'>
-                <img className="rounded-t-lg p-2 w-80" src={img[0]} alt="product" />
+                <img className="rounded-t-lg p-2 w-80" src={img} alt="product" />
             </div>
             <div className="p-5 flex flex-col justify-between relative">
                 <h3 className="font-semibold text-xl tracking-tight">{name}</h3>

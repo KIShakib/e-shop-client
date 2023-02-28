@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import { ImFacebook } from "react-icons/im";
 import { AuthContext } from '../../../Context/AuthContext/AuthProvider';
 import { toast } from 'react-hot-toast';
 import SmallSpinner from '../../Shared/SmallSpinner';
@@ -145,7 +144,7 @@ const Signup = () => {
                                 id='image'
                                 name='image'
                                 accept='image/*'
-                            // required
+                                required
                             />
                         </div>
                         <div>
@@ -212,9 +211,10 @@ const Signup = () => {
                     <div className="flex justify-center space-x-4 mt-4">
                         <button
                             onClick={handleSignInWithGoogle}
-                            className="border p-2 rounded-md hover:bg-white"
+                            className="flex items-center gap-x-2 border p-2 rounded-sm hover:bg-white px-10"
                         >
                             <FcGoogle className="text-xl"></FcGoogle>
+                            Login With Google
                         </button>
                     </div>
                 </div>

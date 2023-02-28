@@ -6,7 +6,6 @@ import { AuthContext } from '../../../Context/AuthContext/AuthProvider';
 import { addToCart } from '../../../redux/Features/cart/cartSlice';
 
 const ProductDetails = () => {
-    const [imageShow, setImageShow] = useState(0);
     const { user } = useContext(AuthContext);
     console.log(user);
     const dispatch = useDispatch();
@@ -41,19 +40,10 @@ const ProductDetails = () => {
 
     const { cpu, gpu, img, name, ssd, price } = product;
     return (
-        <section className='lg:flex md:flex lg:flex-row md:flex-row flex-col px-20 my-10 gap-x-10'>
+        <section className='lg:flex md:flex lg:flex-row md:flex-row flex-col lg:px-20 md:px-10 px-4 my-10 gap-x-10'>
             <div className='flex flex-col gap-y-8 lg:w-[40%] md:w-[40%]'>
                 <div>
-                    <img src={img[imageShow]} className="lg:w-80 md:w-72 w-96" alt="" />
-                </div>
-                <div className='flex flex-row gap-x-2'>
-                    {
-                        img?.map((image, i) =>
-                            <button onClick={() => setImageShow(i)} className={`${imageShow === i && "opacity-25"}`}>
-                                <img key={i} src={image} className="w-20 p-1 border-[2px] border-[#183661]" alt="" />
-                            </button>
-                        )
-                    }
+                    <img src={img} className="lg:w-96 h-80 md:w-72 w-96" alt="" />
                 </div>
             </div>
             <div className='lg:w-[60%] md:w-[60%] flex flex-col justify-between gap-y-4 lg:gap-y-0 md:gap-y-0 mt-8 md:mt-0 lg:mt-0'>

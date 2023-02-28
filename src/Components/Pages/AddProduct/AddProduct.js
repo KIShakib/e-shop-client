@@ -14,43 +14,53 @@ const AddProduct = () => {
         const cpu = form.cpu.value;
         const gpu = form.gpu.value;
         const ssd = form.ssd.value;
-        const image1 = form.image1.value;
-        const image2 = form.image2.value;
-        const image3 = form.image3.value;
-        const image4 = form.image4.value;
+        const image = form.image.files[0];
         const quantity = form.quantity.value;
         const price = form.price.value;
         // console.log(productName, category, cpu, gpu, ssd, image1, image2, image3, image4, quantity, price);
 
-        const product = {
-            name: productName,
-            cpu,
-            gpu,
-            ssd,
-            price,
-            category,
-            quantity,
-            img: [image1, image2, image3, image4]
-        }
-        setLoading(true)
-        fetch(`${process.env.REACT_APP_API_URL}/add-product`, {
+
+        // Upload To Imgbb
+        const formData = new FormData();
+        formData.append("image", image)
+        const url = `https://api.imgbb.com/1/upload?key=${process.env.REACT_APP_imgbb_apikey}`;
+        fetch(url, {
             method: "POST",
-            headers: {
-                "content-type": "application/json"
-            },
-            body: JSON.stringify(product)
+            body: formData
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
-                if (data.acknowledged) {
-                    toast.success(`${productName} Added Successfully...`);
-                    setLoading(false)
-                    form.reset();
+                const product = {
+                    name: productName,
+                    cpu,
+                    gpu,
+                    ssd,
+                    price,
+                    category,
+                    quantity,
+                    img: data.data.display_url
                 }
+                setLoading(true)
+                fetch(`${process.env.REACT_APP_API_URL}/add-product`, {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify(product)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.acknowledged) {
+                            toast.success(`${productName} Added Successfully...`);
+                            setLoading(false)
+                            form.reset();
+                        }
+                    })
             })
 
-        setLoading(false)
+
+
     }
 
 
@@ -118,38 +128,15 @@ const AddProduct = () => {
                         <div className='flex flex-col'>
                             <label htmlFor='image' className='text-base'>
                                 Product Image
-                                <span className='text-sm ml-2'>(Please use url)</span>
                             </label>
                             <div className='flex flex-col gap-y-2'>
                                 <input
-                                    name='image1'
-                                    id='image1'
-                                    type='text'
+                                    type='file'
+                                    id='image'
+                                    name='image'
+                                    accept='image/*'
                                     className='w-full p-2 focus:outline-[#183661]'
-                                    placeholder="img.png"
-                                    required={true}
-                                />
-                                <input
-                                    name='image2'
-                                    id='image2'
-                                    type='text'
-                                    className='w-full p-2 focus:outline-[#183661]'
-                                    placeholder="img.jpg"
-                                    required={true}
-                                />
-                                <input
-                                    name='image3'
-                                    id='image3'
-                                    type='text'
-                                    className='w-full p-2 focus:outline-[#183661]'
-                                    placeholder="img.png"
-                                />
-                                <input
-                                    name='image4'
-                                    id='image4'
-                                    type='text'
-                                    className='w-full p-2 focus:outline-[#183661]'
-                                    placeholder="img.jpg"
+                                    required
                                 />
                             </div>
                         </div>

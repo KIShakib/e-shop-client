@@ -56,7 +56,7 @@ const Login = () => {
     }
 
 
- 
+
 
 
 
@@ -156,9 +156,10 @@ const Login = () => {
                     <div className="flex justify-center space-x-4 mt-4">
                         <button
                             onClick={handleSignInWithGoogle}
-                            className="border p-2 rounded-md hover:bg-white"
+                            className="flex items-center gap-x-2 border p-2 rounded-sm hover:bg-white px-10"
                         >
                             <FcGoogle className="text-xl"></FcGoogle>
+                            Login With Google
                         </button>
                     </div>
                 </div>
