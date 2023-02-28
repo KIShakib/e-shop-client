@@ -1,7 +1,7 @@
 import React from 'react';
+import Products from '../../Products/Products';
 import Categories from '../Categories/Categories';
 import Hero from '../Hero/Hero';
-import HomePageProducts from '../HomePageProducts/HomePageProducts';
 import Reviews from '../Reviews/Reviews';
 import WhyUs from '../WhyUs/WhyUs';
 
@@ -10,7 +10,7 @@ const Home = () => {
         <div>
             <Hero />
             <Categories />
-            <HomePageProducts />
+            <Products />
             <Reviews />
             <WhyUs />
         </div>

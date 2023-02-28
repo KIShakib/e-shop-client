@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const HomePageProduct = ({ product }) => {
+    const [categoryFilter, setCategoryFilter] = useState("all");
     const { _id, cpu, gpu, img, name, ssd, price } = product;
     return (
         <div className="flex flex-col justify-evenly bg-slate-50 hover:shadow-[0_0px_35px_-15px_rgba(50,130,173,0.8)] rounded w-full hover:bg-slate-100 text-[#183661]">
+            <div className='my-6 flex justify-end'>
+                <select onChange={(e) => setCategoryFilter(e.target.value)} name="productFilter" id="" className='w-48 p-2 border-2'>
+                    <option value="all" selected>All</option>
+                    <option value="amd">AMD</option>
+                    <option value="intel">Intel</option>
+                </select>
+            </div>
             <div className='flex justify-center'>
                 <img className="rounded-t-lg p-2 w-80" src={img} alt="product" />
             </div>
