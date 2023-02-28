@@ -1,0 +1,94 @@
+{
+	"data": [
+		{
+			"name": "Battlefield PC 1",
+			"cpu": "Intel i7 12400K",
+			"gpu": "AMD Radeon 5500XD",
+			"ssd": "512GB",
+			"price": 49999,
+			"category": "amd",
+			"quantity": "3",
+			"img": [
+				"https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png",
+				"https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png",
+				"https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png",
+				"https://www.techlandbd.com/image/catalog/Motherboard/Msi/PRO%20Z690-P%20DDR4/MSI%20PRO%20Z690-P.jpg"
+			]
+		},
+		{
+			"_id": 2,
+			"name": "Battlefield PC 2",
+			"img": [
+				"https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png",
+				"https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png",
+				"https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png",
+				"https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png"
+			],
+			"cpu": "Intel i7 12400K",
+			"gpu": "AMD Radeon 5500XD",
+			"ssd": "512GB",
+			"price": 49999,
+			"category": "computer"
+		},
+		{
+			"_id": 3,
+			"name": "Battlefield PC 3",
+			"img": [
+				"https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png",
+				"https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png",
+				"https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png",
+				"https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png"
+			],
+			"cpu": "Intel i7 12400K",
+			"gpu": "AMD Radeon 5500XD",
+			"ssd": "512GB",
+			"price": 49999,
+			"category": "computer"
+		},
+		{
+			"_id": 4,
+			"name": "Battlefield PC 4",
+			"img": [
+				"https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png",
+				"https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png",
+				"https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png",
+				"https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png"
+			],
+			"cpu": "Intel i7 12400K",
+			"gpu": "AMD Radeon 5500XD",
+			"ssd": "512GB",
+			"price": 49999,
+			"category": "computer"
+		},
+		{
+			"_id": 5,
+			"name": "Battlefield PC 5",
+			"img": [
+				"https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png",
+				"https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png",
+				"https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png",
+				"https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png"
+			],
+			"cpu": "Intel i7 12400K",
+			"gpu": "AMD Radeon 5500XD",
+			"ssd": "512GB",
+			"price": 49999,
+			"category": "computer"
+		},
+		{
+			"_id": 6,
+			"name": "Battlefield PC 6",
+			"img": [
+				"https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png",
+				"https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png",
+				"https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png",
+				"https://upload.wikimedia.org/wikipedia/commons/f/f5/Avalanche_Hardline_Liquid_Cooled_Gaming_PC.png"
+			],
+			"cpu": "Intel i7 12400K",
+			"gpu": "AMD Radeon 5500XD",
+			"ssd": "512GB",
+			"price": 49999,
+			"category": "computer"
+		}
+	]
+}
